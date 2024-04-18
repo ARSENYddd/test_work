@@ -1,12 +1,17 @@
 <template>
-    <q-form @submit="handleSubmit">
+    <q-card class="max-w-sm q-mt-md">
+      <q-card-section>
       <!-- Ваши поля ввода для регистрации -->
       <q-input v-model="formData.username" label="Username" />
       <q-input v-model="formData.email" label="Email" type="email" />
       <q-input v-model="formData.password" label="Password" type="password" />
       <!-- Кнопка для отправки формы -->
-      <q-btn type="submit" label="Register" color="primary" />
-    </q-form>
+      </q-card-section>
+
+      <q-card-actions align="right">
+    <q-btn color="primary" label="регистрация" @click="handleSubmit" />
+  </q-card-actions>
+</q-card>
   </template>
   
   <script lang="ts">
